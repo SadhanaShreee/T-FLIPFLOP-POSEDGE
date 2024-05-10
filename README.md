@@ -43,25 +43,27 @@ Verify Output Behavior: Verify that the output behavior of the T flip-flop match
 Check for Race Conditions: Ensure that there are no race conditions or undefined states in the design by analyzing the timing and sequence of input changes.
 
 **PROGRAM**
-Developed by: SADHANA SHREE B
-Register Number: 212223230177
-                                         module T_FLIPFLOP( input clk, rst_n, input t,
-                                         output reg q,
-                                         output q_bar
-                                         );
-                                         always@(posedge clk) 
-                                         begin 
-                                         if(!rst_n)
-                                          q<=0;
-                                          else
-                                          if(t)
-                                          q<=~q;
-                                          else
-                                          q<=q;
-                                          end
+
+
+                                              #Developed by: SADHANA SHREE B
+                                              #Register Number: 212223230177
+                                               module T_FLIPFLOP( input clk, rst_n, input t,
+                                               output reg q,
+                                               output q_bar
+                                               );
+                                               always@(posedge clk) 
+                                               begin 
+                                               if(!rst_n)
+                                                q<=0;
+                                                else
+                                                if(t)
+                                                q<=~q;
+                                                else
+                                                q<=q;
+                                                end
  
-                                        assign q_bar = ~q;
-                                        endmodule
+                                           assign q_bar = ~q;
+                                           endmodule
 
 **RTL LOGIC FOR FLIPFLOPS**
 
